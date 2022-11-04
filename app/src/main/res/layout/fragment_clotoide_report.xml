@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clotoide.ClotoideReportFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="411dp"
+                android:layout_height="489dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/clotoide" />
+
+            <ImageView
+                android:id="@+id/iv_save_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button2"
+                android:padding="5dp"
+                android:textColor="@color/purple_500"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_save"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_view_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button2"
+                android:padding="5dp"
+                android:textColor="@color/purple_500"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_baseline_preview_24"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A) METODO DE LAS DEFLEXIONES"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REPLANTEO TRAMO TE-EC "
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/myTableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200">
+
+                <TableRow
+                    android:background="@color/yellow_">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:text="PROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="CUERDA\nUNITARIA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:id="@+id/tvIMO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="L"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="L^2"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="K = θe/le"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="θ= K * L^2"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="P = (θ/3) - Z"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REPLANTEO TRAMO EC-CE"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/myTableLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200">
+
+                <TableRow
+                    android:background="@color/yellow_">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="PROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="CUERDA\nUNITARIA"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="FLEXION\nUNITARIA"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="DEFLEXION\nACUMULADA"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ANGULO DE\nREPLANTEO"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="A\nPROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REPLANTEO TRAMO ET-CE"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/myTableLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200">
+
+                <TableRow
+                    android:background="@color/yellow_">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:text="PROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="CUERDA\nUNITARIA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="L"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:gravity="center"
+                        android:text="L^2"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="K = θe/le"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="θ = K * L2"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="P = (θ/3) - Z"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                </TableRow>
+            </TableLayout>
+
+        </HorizontalScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B)METODO DE LAS COORDENADAS"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REPLANTEO TRAMO TE-EC"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/myTableLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200">
+
+                <TableRow
+                    android:background="@color/yellow_">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:text="DE\nPROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="L"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="θ [º] "
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="θ[rad]"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="Xc"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="Yc"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="C.L."
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="φ[º]"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="AZIMUT"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ΔN"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ΔE"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="NORTE"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ESTE"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="A\nPROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                </TableRow>
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REPLANTEO TRAMO EC-CE"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/myTableLayout6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200">
+
+                <TableRow
+                    android:background="@color/yellow_">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:text="DE\nPROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="CUEDA\nUNITARIA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="DELECCION\nUNITARIA"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="DELECCION\nACUMULADA"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="AZIMUT"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="DH"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="ΔN"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="ΔE"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="NORTE"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ESTE"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="A\nPROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REPLANTEO TRAMO ET-CE"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/myTableLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200">
+
+                <TableRow
+                    android:background="@color/yellow_">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:text="DE\nPROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="L"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="θ [º]"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="θ [rad]"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="Xc"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="Yc"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="C.L."
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="φ [º]"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="AZIMUT"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ΔN"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ΔE"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="2dp"
+                        android:background="@color/yellow"
+                        android:textStyle="bold"
+                        android:text="NORTE"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="ESTE"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/yellow"
+                        android:layout_margin="2dp"
+                        android:text="A\nPROGRESIVA"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Carreteras Nex</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">About</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_solucion">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="dato1">Prog PI</string>
+    <string name="dato2">∆º</string>
+    <string name="dato3">Vp</string>
+    <string name="dato4">Cu</string>
+    <string name="dato5">n</string>
+    <string name="dato6">a</string>
+    <string name="dato7">R</string>
+    <string name="dato8">A</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_vertical">Vertical</string>
+    <string name="app_horizontal">Horizontal</string>
+    <string name="app_clotioide">Clotoide</string>
+
+    <string name="create_notification">Crear notificación</string>
+    <string name="basic_channel_name">Notificación Básica</string>
+    <string name="basic_channel_description">Canal para notificaciones sencillas</string>
+    <string name="basic_channel_id">basic_channel</string>
+    <string name="default_notification_channel_id">id1</string>
+</resources>
